@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -28,6 +28,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import {LoadingInterceptor} from './interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './photo-editor/photo-editor.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { TextInputComponent } from './forms/text-input/text-input.component';
+import{BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { DateInputComponent } from './forms/date-input/date-input.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     ServerErrorComponent,
     MemberCardComponent,
     MemberEditComponent,
-    PhotoEditorComponent
+    PhotoEditorComponent,
+    TextInputComponent,
+    DateInputComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +57,9 @@ import { FileUploadModule } from 'ng2-file-upload';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     BsDropdownModule.forRoot(),
+    BsDatepickerModule.forRoot(),
     ToastrModule.forRoot({
       positionClass:'toast-bottom-right'
     }),
