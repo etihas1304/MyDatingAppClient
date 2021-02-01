@@ -7,6 +7,7 @@ import { AccountService } from '../services/account.service';
 import { UserParams } from '../models/userParams';
 import { User } from '../models/user';
 import { take } from 'rxjs/operators';
+import { Message } from '../models/message';
 @Component({
   selector: 'app-member-list',
   templateUrl: './member-list.component.html',
